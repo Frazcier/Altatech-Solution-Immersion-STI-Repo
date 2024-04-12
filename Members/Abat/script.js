@@ -7,7 +7,6 @@ let posts = document.getElementById("posts");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log("Button Clicked")
 
     formValidation();
 })
@@ -15,14 +14,10 @@ form.addEventListener("submit", (e) => {
 let formValidation = () => {
     if (title.value === "") {
         msg.innerHTML = "Please enter title";
-        console.log("fail")
     } else if (desc.value === "") {
         msg.innerHTML = "Please enter description";
-        console.log("fail")
     }else {
         msg.innerHTML = "";
-        console.log("success")
-
         acceptData();
     }
 };
