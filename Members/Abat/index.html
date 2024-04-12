@@ -35,6 +35,7 @@
         #form #desc,
         #form #image {
             font-size: 18px;
+            font-family: 'Poppins';
             border: 1px solid black;
             border-radius: 10px;
             padding: 5px 10px;
@@ -64,40 +65,52 @@
             opacity 0.5s ease;
         }
 
-        .left-container #form #btn:hover{
+        #form #btn:hover{
             background-color: rgb(112, 112, 235);
             color: white;
         }
 
         /**** RIGHT CONTAINER ****/
-        .right-container #posts {
-            width: 400px;
+        #posts {
+            max-width: 600px;
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 10px;
         }
 
-        .right-container #posts i {
+        #posts i {
             cursor: pointer;
         }
 
-        .right-container #posts .post {
+        #posts .post {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        .right-container #posts .title {
-            font-size: 18px;
+        #posts .title {
+            font-size: 22px;
             font-weight: bold;
-
         }
 
-        .right-container #posts .image {
+        #posts .desc {
+            font-size: 18px;
+            text-wrap: wrap;
+        }
+
+        #posts .image {
             max-width: 500px;
         }
 
-        .right-container #posts .options {
+        #posts .options {
             display: flex;
             gap: 25px;
         }
+
+        .hidden {
+            display: none;
+        }
+
     </style>
 </head>
 <body>
@@ -122,9 +135,7 @@
         <div class="right-container">
             <h1>Your Posts</h1>
 
-            <div id="posts">
-
-            </div>
+            <div id="posts" class="hidden"></div>
         </div>
     </div>
     <script src="script.js"></script>

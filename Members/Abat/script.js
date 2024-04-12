@@ -34,11 +34,16 @@ let acceptData = () => {
         data["title"] = title.value;
         data["desc"] = desc.value;
         createPost();
+        $("#posts").removeClass("hidden");
+        $("#posts").addClass("show");
     } else {
         data["title"] = title.value;
         data["desc"] = desc.value;
         data["img"] = image.value;
         createPost();
+        $("#posts").removeClass("hidden");
+        $("#posts").addClass("show");
+
     }
 
 
