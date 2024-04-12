@@ -53,8 +53,6 @@ let createPost = () => {
     title.value = "";
     desc.value = "";
     image.value = "";
-    $("#posts").removeClass("hidden");
-    $("#posts").addClass("show");
 };
 
 let deletePost = (e) => {
@@ -62,8 +60,8 @@ let deletePost = (e) => {
 };
 
 let editPost = (e) => {
-    title.value = e.parentElement.previousElementSibling.previousElementSibling.innerHTML;
-    desc.value = e.parentElement.previousElementSibling.previousElementSibling.innerHTML;
-    image.value = e.parentElement.previousElementSibling.previousElementSibling.innerHTML;
+    title.value = e.parentElement.previousElementSibling.innerHTML;
+    desc.value = e.parentElement.previousElementSibling.innerHTML;
+    image.value = e.parentElement.previousElementSibling.innerHTML;
     e.parentElement.parentElement.remove();
 };
